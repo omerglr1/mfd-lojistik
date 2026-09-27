@@ -1,0 +1,202 @@
+.services-section {
+  padding: 90px 0;
+  background-color: var(--bg-secondary);
+  position: relative;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 50px;
+}
+
+.service-card {
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  transition: background var(--transition-fast);
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold-primary);
+}
+
+.service-card:hover::before {
+  background: var(--gold-gradient);
+}
+
+.service-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.service-icon-box {
+  width: 58px;
+  height: 58px;
+  border-radius: var(--radius-sm);
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.service-card:hover .service-icon-box {
+  background: var(--gold-gradient);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+.service-icon {
+  color: var(--gold-primary);
+  transition: color var(--transition-fast);
+}
+
+.service-card:hover .service-icon {
+  color: #0b0e14;
+}
+
+.service-number {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.1);
+  letter-spacing: 0.05em;
+}
+
+.service-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.service-desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.service-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 26px;
+  flex: 1;
+}
+
+.service-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+}
+
+.feature-check {
+  color: var(--gold-primary);
+  flex-shrink: 0;
+}
+
+.service-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.service-wa-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #25D366;
+  transition: color var(--transition-fast);
+}
+
+.service-wa-link:hover {
+  color: #fff;
+}
+
+.service-calc-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.service-calc-btn:hover {
+  color: var(--gold-light);
+}
+
+/* CTA Banner */
+.services-cta-banner {
+  padding: 32px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  background: rgba(14, 19, 31, 0.95);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.cta-banner-content {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.cta-banner-content h3 {
+  font-size: 1.35rem;
+  margin-bottom: 6px;
+}
+
+.cta-banner-content p {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .services-cta-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px;
+  }
+  .cta-banner-content {
+    flex-direction: column;
+  }
+}

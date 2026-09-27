@@ -1,0 +1,243 @@
+.floating-wa-container {
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.wa-floating-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.45);
+  position: relative;
+  transition: transform 0.25s ease;
+}
+
+.wa-floating-btn:hover {
+  transform: scale(1.08);
+}
+
+.wa-floating-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #0a0d14;
+  color: var(--gold-light);
+  border: 1.5px solid var(--gold-primary);
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: var(--radius-full);
+}
+
+/* Popup Card */
+.wa-popup-card {
+  width: 340px;
+  background: #0e131f;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: var(--radius-md);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  margin-bottom: 16px;
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.wa-popup-header {
+  background: #111a2e;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.wa-header-avatar {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold-primary);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.wa-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wa-online-indicator {
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+  width: 9px;
+  height: 9px;
+  background: #25D366;
+  border: 1.5px solid #000;
+  border-radius: 50%;
+}
+
+.wa-header-text {
+  flex: 1;
+}
+
+.wa-header-text h4 {
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.wa-header-text span {
+  font-size: 0.72rem;
+  color: #25D366;
+}
+
+.wa-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+}
+
+.wa-close-btn:hover {
+  color: #fff;
+}
+
+/* Body */
+.wa-popup-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: #080c14;
+}
+
+.wa-bubble {
+  background: #162035;
+  padding: 12px 14px;
+  border-radius: 12px 12px 12px 2px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.wa-bubble p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #e2e8f0;
+}
+
+.wa-bubble strong {
+  color: var(--gold-light);
+}
+
+.wa-bubble-time {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-align: right;
+  margin-top: 6px;
+}
+
+.wa-quick-options {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.quick-opt-title {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.quick-opt-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  font-size: 0.78rem;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.quick-opt-btn:hover {
+  background: rgba(37, 211, 102, 0.12);
+  border-color: rgba(37, 211, 102, 0.4);
+  color: #fff;
+}
+
+/* Footer */
+.wa-popup-footer {
+  padding: 10px 14px;
+  background: #101626;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.wa-input {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 9px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.wa-input:focus {
+  border-color: #25D366;
+}
+
+.wa-send-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.wa-send-btn:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+  .wa-popup-card {
+    width: calc(100vw - 32px);
+    right: 16px;
+  }
+  .floating-wa-container {
+    bottom: 20px;
+    right: 20px;
+  }
+}

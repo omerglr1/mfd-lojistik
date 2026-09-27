@@ -1,0 +1,238 @@
+.routes-section {
+  padding: 90px 0;
+  background-color: var(--bg-primary);
+  position: relative;
+}
+
+.routes-nav-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.route-tab-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(16, 22, 36, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 14px 28px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  min-width: 220px;
+}
+
+.route-tab-pill:hover {
+  background: rgba(24, 33, 53, 0.9);
+  border-color: var(--border-gold);
+}
+
+.route-tab-pill.active {
+  background: rgba(212, 175, 55, 0.12);
+  border-color: var(--gold-primary);
+  box-shadow: 0 6px 25px rgba(212, 175, 55, 0.25);
+}
+
+.tab-pill-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.route-tab-pill.active .tab-pill-name {
+  color: var(--gold-light);
+}
+
+.tab-pill-sub {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* Region Display Card */
+.region-display-card {
+  padding: 36px;
+  background: rgba(14, 19, 31, 0.9);
+}
+
+.region-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.region-media {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: var(--shadow-md);
+  height: 100%;
+  min-height: 480px;
+}
+
+.region-truck-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.region-media-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(10, 13, 20, 0.15) 0%, rgba(10, 13, 20, 0.8) 100%);
+  pointer-events: none;
+}
+
+.region-badge-corner {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(10, 13, 20, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-gold);
+  font-size: 0.85rem;
+  color: #fff;
+}
+
+.font-bold {
+  font-weight: 800;
+  font-family: var(--font-display);
+}
+
+/* Region Info */
+.region-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.region-heading {
+  font-size: 1.9rem;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.region-p {
+  font-size: 0.96rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* Stats Row */
+.region-stats-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.r-stat {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(8, 11, 18, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+}
+
+.r-stat-label {
+  display: block;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+.r-stat-val {
+  display: block;
+  font-size: 1.15rem;
+  color: #fff;
+}
+
+/* Countries */
+.countries-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-bottom: 12px;
+}
+
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.country-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+}
+
+.country-name-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  color: #fff;
+}
+
+.country-hubs {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Corridor Features */
+.corridor-features-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.corridor-feat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+}
+
+.region-cta-wrap {
+  margin-top: 8px;
+}
+
+@media (max-width: 992px) {
+  .region-grid {
+    grid-template-columns: 1fr;
+  }
+  .region-media {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 600px) {
+  .region-display-card {
+    padding: 20px;
+  }
+  .countries-grid, .corridor-features-list, .region-stats-row {
+    grid-template-columns: 1fr;
+  }
+  .route-tab-pill {
+    width: 100%;
+  }
+}

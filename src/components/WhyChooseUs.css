@@ -1,0 +1,116 @@
+.why-us-section {
+  padding: 90px 0;
+  background-color: var(--bg-secondary);
+  position: relative;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  margin-bottom: 40px;
+}
+
+.why-card {
+  padding: 32px 26px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold-primary);
+}
+
+.why-icon-box {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-sm);
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: all var(--transition-fast);
+}
+
+.why-card:hover .why-icon-box {
+  background: var(--gold-gradient);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+.why-icon {
+  color: var(--gold-primary);
+  transition: color var(--transition-fast);
+}
+
+.why-card:hover .why-icon {
+  color: #0b0e14;
+}
+
+.why-title {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.why-desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.why-card-bar {
+  margin-top: 20px;
+  height: 2px;
+  width: 30px;
+  background: var(--gold-primary);
+  transition: width var(--transition-normal);
+}
+
+.why-card:hover .why-card-bar {
+  width: 100%;
+}
+
+/* Assurance Banner */
+.why-assurance-banner {
+  padding: 36px 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  background: rgba(14, 19, 31, 0.95);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.assurance-left h3 {
+  font-size: 1.6rem;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.assurance-left p {
+  font-size: 0.95rem;
+  max-width: 680px;
+}
+
+@media (max-width: 1024px) {
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+  .why-assurance-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px;
+  }
+}
