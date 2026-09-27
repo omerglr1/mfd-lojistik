@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MessageCircle, MapPin, Clock, Send, CheckCircle2, ShieldCheck } from 'lucide-react';
+import InstagramIcon from './InstagramIcon';
 import { COMPANY_INFO } from '../data/companyData';
 import './ContactSection.css';
 
@@ -23,9 +24,9 @@ export default function ContactSection() {
     setFormSent(true);
   };
 
-  const handleWhatsAppDirect = () => {
+  const handleWhatsAppDirect = (phoneRaw = '905522885331') => {
     const text = `Merhaba MFD Lojistik,%0A%0A*Ad Soyad:* ${contactForm.name || 'Ziyaretçi'}%0A*Telefon:* ${contactForm.phone || 'Belirtilmedi'}%0A*E-posta:* ${contactForm.email || 'Belirtilmedi'}%0A*Konu:* ${contactForm.subject}%0A*Mesaj:* ${contactForm.message || 'Lojistik hizmetleriniz hakkında görüşmek istiyorum.'}`;
-    window.open(`https://wa.me/905522885331?text=${text}`, '_blank');
+    window.open(`https://wa.me/${phoneRaw}?text=${text}`, '_blank');
   };
 
   return (
@@ -49,14 +50,24 @@ export default function ContactSection() {
 
         {/* Contact Cards Grid */}
         <div className="contact-cards-grid">
-          {/* Phone Card */}
-          <a href={`tel:${COMPANY_INFO.phoneRaw}`} className="c-card glass-panel">
+          {/* Phone Card 1: TR */}
+          <a href={`tel:${COMPANY_INFO.phone1Raw}`} className="c-card glass-panel" title="Türkiye Hattını Ara">
             <div className="c-card-icon-wrap">
               <Phone size={26} className="c-card-icon" />
             </div>
-            <span className="c-card-label">Telefon & Çağrı Merkezi</span>
-            <strong className="c-card-main">{COMPANY_INFO.phone}</strong>
-            <span className="c-card-sub">Hemen aramak için tıklayın</span>
+            <span className="c-card-label">Türkiye Telefon & Operasyon</span>
+            <strong className="c-card-main">{COMPANY_INFO.phone1Formatted}</strong>
+            <span className="c-card-sub">🇹🇷 Hemen aramak için tıklayın</span>
+          </a>
+
+          {/* Phone Card 2: UA */}
+          <a href={`tel:${COMPANY_INFO.phone2Raw}`} className="c-card glass-panel" title="Ukrayna / Yurtdışı Hattını Ara">
+            <div className="c-card-icon-wrap">
+              <Phone size={26} className="c-card-icon" />
+            </div>
+            <span className="c-card-label">Yurtdışı / Ukrayna Hattı</span>
+            <strong className="c-card-main">{COMPANY_INFO.phone2Formatted}</strong>
+            <span className="c-card-sub">🇺🇦 Doğrudan aramak için tıklayın</span>
           </a>
 
           {/* WhatsApp Card */}
@@ -70,8 +81,24 @@ export default function ContactSection() {
               <MessageCircle size={26} className="c-card-icon" />
             </div>
             <span className="c-card-label">7/24 WhatsApp Canlı Hat</span>
-            <strong className="c-card-main">0552 288 5331</strong>
+            <strong className="c-card-main">{COMPANY_INFO.phone1}</strong>
             <span className="c-card-sub">Anında sohbet başlatmak için tıklayın</span>
+          </a>
+
+          {/* Instagram Card */}
+          <a 
+            href={COMPANY_INFO.instagram}
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="c-card glass-panel ig-card-highlight"
+            title="MFD Lojistik Instagram Hesabını Görüntüle"
+          >
+            <div className="c-card-icon-wrap ig-icon-wrap">
+              <InstagramIcon size={26} className="c-card-icon ig-pink-icon" />
+            </div>
+            <span className="c-card-label">Resmi Instagram</span>
+            <strong className="c-card-main">@mfdlojistik</strong>
+            <span className="c-card-sub">Filo paylaşımları & güncel seferler</span>
           </a>
 
           {/* Email Card */}
@@ -89,7 +116,7 @@ export default function ContactSection() {
             <div className="c-card-icon-wrap">
               <ShieldCheck size={26} className="c-card-icon" />
             </div>
-            <span className="c-card-label">Firma Sahibi & Kurucu</span>
+            <span className="c-card-label">Firma Sahipleri & Kurucular</span>
             <strong className="c-card-main">{COMPANY_INFO.owner}</strong>
             <span className="c-card-sub">Genel Yönetim & Koordinasyon</span>
           </div>
@@ -171,11 +198,22 @@ export default function ContactSection() {
 
                   <button 
                     type="button" 
-                    onClick={handleWhatsAppDirect}
+                    onClick={() => handleWhatsAppDirect('905522885331')}
                     className="btn btn-whatsapp"
+                    title="Türkiye WhatsApp Hattına Aktar"
                   >
                     <MessageCircle size={18} />
-                    <span>WhatsApp'a Aktar</span>
+                    <span>WhatsApp TR</span>
+                  </button>
+
+                  <button 
+                    type="button" 
+                    onClick={() => handleWhatsAppDirect('380936113131')}
+                    className="btn btn-whatsapp btn-wa-ua"
+                    title="Ukrayna / Yurtdışı WhatsApp Hattına Aktar"
+                  >
+                    <MessageCircle size={18} />
+                    <span>WhatsApp UA</span>
                   </button>
                 </div>
               </form>
@@ -230,15 +268,28 @@ export default function ContactSection() {
                 <strong>Anında İletişim İhtiyacınız mı Var?</strong>
                 <span>Yetkili dispeçerimiz ile doğrudan WhatsApp üzerinden canlı görüşme başlatın.</span>
               </div>
-              <a 
-                href={COMPANY_INFO.whatsappUrl()}
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="btn btn-whatsapp"
-              >
-                <MessageCircle size={18} />
-                <span>0552 288 5331</span>
-              </a>
+              <div className="wa-callout-actions">
+                <a 
+                  href={COMPANY_INFO.whatsappUrl()}
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="btn btn-whatsapp"
+                  title="Türkiye WhatsApp Hattı"
+                >
+                  <MessageCircle size={16} />
+                  <span>🇹🇷 {COMPANY_INFO.phone1}</span>
+                </a>
+                <a 
+                  href={COMPANY_INFO.whatsappUrlUA()}
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="btn btn-whatsapp btn-wa-ua"
+                  title="Ukrayna / Yurtdışı WhatsApp Hattı"
+                >
+                  <MessageCircle size={16} />
+                  <span>🇺🇦 {COMPANY_INFO.phone2}</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>

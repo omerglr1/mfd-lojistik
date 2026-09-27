@@ -78,6 +78,14 @@
   color: var(--gold-light);
 }
 
+.f-contact-link.f-ig-link:hover {
+  color: #ff5e7e;
+}
+
+.ig-pink-icon {
+  color: #ff5e7e;
+}
+
 /* Nav Col */
 .footer-title {
   font-size: 1.15rem;

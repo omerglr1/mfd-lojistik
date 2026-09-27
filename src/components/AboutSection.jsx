@@ -28,7 +28,7 @@ export default function AboutSection() {
                 <img src={COMPANY_INFO.logo} alt="MFD Logo" className="stamp-logo" />
                 <div>
                   <span className="stamp-title">MFD LOJİSTİK</span>
-                  <span className="stamp-sub">Mehmet Faruk Dere</span>
+                  <span className="stamp-sub">Mehmet Faruk Dere & Mahmut Dere</span>
                 </div>
               </div>
 
@@ -129,13 +129,13 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* Founder & Owner Section: Mehmet Faruk Dere */}
+        {/* Founders & Owners Section: Mehmet Faruk Dere & Mahmut Dere */}
         <div className="founder-quote-card glass-panel">
           <div className="founder-quote-header">
             <Quote size={38} className="gold-quote-icon" />
             <div className="founder-badge">
               <UserCheck size={16} className="gold-text-icon" />
-              <span>FİRMA SAHİBİ & KURUCU VİZYONU</span>
+              <span>FİRMA SAHİPLERİ & KURUCU VİZYONU</span>
             </div>
           </div>
 
@@ -147,19 +147,17 @@ export default function AboutSection() {
 
           <div className="founder-signature-wrap">
             <div className="founder-info-block">
-              <strong className="founder-name">Mehmet Faruk Dere</strong>
-              <span className="founder-title">MFD LOJİSTİK — Firma Sahibi & Kurucu</span>
+              <strong className="founder-name">Mehmet Faruk Dere & Mahmut Dere</strong>
+              <span className="founder-title">MFD LOJİSTİK — Firma Sahipleri & Kurucular</span>
             </div>
 
             <div className="founder-acronym-badge">
               <div className="mfd-letters">
-                <span><strong>M</strong>ehmet</span>
-                <span className="sep">•</span>
-                <span><strong>F</strong>aruk</span>
-                <span className="sep">•</span>
-                <span><strong>D</strong>ere</span>
+                <span><strong>Mehmet Faruk Dere</strong></span>
+                <span className="sep">&</span>
+                <span><strong>Mahmut Dere</strong></span>
               </div>
-              <span className="mfd-tag">MFD LOJİSTİK GÜVENCESİ</span>
+              <span className="mfd-tag">MFD LOJİSTİK YÖNETİM GÜVENCESİ</span>
             </div>
           </div>
         </div>

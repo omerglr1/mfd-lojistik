@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, Mail, Clock, MessageCircle, Menu, X, ArrowRight, ShieldCheck } from 'lucide-react';
+import InstagramIcon from './InstagramIcon';
 import { COMPANY_INFO } from '../data/companyData';
 import './Navbar.css';
 
@@ -33,24 +34,39 @@ export default function Navbar() {
       <div className="top-bar">
         <div className="container top-bar-container">
           <div className="top-bar-left">
-            <a href={`tel:${COMPANY_INFO.phoneRaw}`} className="top-info-item">
-              <Phone size={14} className="top-icon" />
-              <span>{COMPANY_INFO.phone}</span>
+            <a href={`tel:${COMPANY_INFO.phone1Raw}`} className="top-info-item" title="Türkiye Hattı">
+              <Phone size={13} className="top-icon" />
+              <span>TR: {COMPANY_INFO.phone1Formatted}</span>
+            </a>
+            <span className="top-divider">|</span>
+            <a href={`tel:${COMPANY_INFO.phone2Raw}`} className="top-info-item" title="Yurtdışı / Ukrayna Hattı">
+              <Phone size={13} className="top-icon" />
+              <span>UA: {COMPANY_INFO.phone2Formatted}</span>
             </a>
             <span className="top-divider">|</span>
             <a href={`mailto:${COMPANY_INFO.email}`} className="top-info-item">
-              <Mail size={14} className="top-icon" />
+              <Mail size={13} className="top-icon" />
               <span>{COMPANY_INFO.email}</span>
             </a>
             <span className="top-divider mobile-hide">|</span>
             <div className="top-info-item mobile-hide">
-              <Clock size={14} className="top-icon" />
-              <span>Firma Sahibi: <strong>{COMPANY_INFO.owner}</strong></span>
+              <Clock size={13} className="top-icon" />
+              <span>Firma Sahipleri: <strong>{COMPANY_INFO.owner}</strong></span>
             </div>
           </div>
 
           <div className="top-bar-right">
             <span className="route-badge">Avrupa • Ortadoğu • Orta Asya</span>
+            <a 
+              href={COMPANY_INFO.instagram}
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="top-ig-badge"
+              title="MFD Lojistik Resmi Instagram Sayfası"
+            >
+              <InstagramIcon size={14} />
+              <span>Instagram</span>
+            </a>
             <a 
               href={COMPANY_INFO.whatsappUrl("Merhaba MFD Lojistik, taşımacılık hizmetleriniz hakkında bilgi almak istiyorum.")}
               target="_blank" 
@@ -58,7 +74,7 @@ export default function Navbar() {
               className="top-wa-badge"
             >
               <MessageCircle size={14} />
-              <span>WhatsApp Canlı Destek</span>
+              <span>WhatsApp</span>
             </a>
           </div>
         </div>
@@ -74,14 +90,14 @@ export default function Navbar() {
             </div>
             <div className="brand-text">
               <span className="brand-title">MFD <span className="gold-text">LOJİSTİK</span></span>
-              <span className="brand-tagline">Uluslararası Taşımacılık • Mehmet Faruk Dere</span>
+              <span className="brand-tagline">Uluslararası Taşımacılık • Mehmet Faruk Dere & Mahmut Dere</span>
             </div>
           </a>
 
           {/* Desktop Nav Links */}
           <ul className="nav-links desktop-only">
             <li><button onClick={() => scrollTo('hero')} className="nav-link-btn">Ana Sayfa</button></li>
-            <li><button onClick={() => scrollTo('about')} className="nav-link-btn">Kurumsal</button></li>
+            <li><button onClick={() => scrollTo('about')} className="nav-link-btn">Kurumsal & Kurucular</button></li>
             <li><button onClick={() => scrollTo('services')} className="nav-link-btn">Hizmetlerimiz</button></li>
             <li><button onClick={() => scrollTo('routes')} className="nav-link-btn">Güzergahlar</button></li>
             <li><button onClick={() => scrollTo('faq')} className="nav-link-btn">S.S.S.</button></li>
@@ -90,6 +106,17 @@ export default function Navbar() {
 
           {/* Action CTAs */}
           <div className="nav-actions desktop-only">
+            <a 
+              href={COMPANY_INFO.instagram}
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="nav-ig-icon-btn"
+              title="Instagram'da Takip Edin"
+              aria-label="Instagram"
+            >
+              <InstagramIcon size={19} />
+            </a>
+
             <a 
               href={COMPANY_INFO.whatsappUrl()}
               target="_blank" 
@@ -122,7 +149,7 @@ export default function Navbar() {
         <div className="mobile-drawer">
           <ul className="mobile-nav-links">
             <li><button onClick={() => scrollTo('hero')}>Ana Sayfa</button></li>
-            <li><button onClick={() => scrollTo('about')}>Kurumsal & Kurucu</button></li>
+            <li><button onClick={() => scrollTo('about')}>Kurumsal & Kurucular</button></li>
             <li><button onClick={() => scrollTo('services')}>Hizmetlerimiz</button></li>
             <li><button onClick={() => scrollTo('routes')}>Güzergahlar & Ülkeler</button></li>
             <li><button onClick={() => scrollTo('faq')}>Sıkça Sorulan Sorular</button></li>
@@ -139,9 +166,25 @@ export default function Navbar() {
               <MessageCircle size={18} />
               <span>WhatsApp ile Hızlı Ulaşın</span>
             </a>
+
+            <a 
+              href={COMPANY_INFO.instagram}
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="btn btn-instagram w-100"
+            >
+              <InstagramIcon size={18} />
+              <span>Instagram (@mfdlojistik)</span>
+            </a>
+
             <div className="mobile-drawer-contact">
-              <a href={`tel:${COMPANY_INFO.phoneRaw}`}>📞 {COMPANY_INFO.phone}</a>
+              <a href={`tel:${COMPANY_INFO.phone1Raw}`}>📞 TR: {COMPANY_INFO.phone1Formatted}</a>
+              <a href={`tel:${COMPANY_INFO.phone2Raw}`}>📞 UA: {COMPANY_INFO.phone2Formatted}</a>
               <a href={`mailto:${COMPANY_INFO.email}`}>✉️ {COMPANY_INFO.email}</a>
+              <div className="mobile-drawer-owners">
+                <span>Firma Sahipleri:</span>
+                <strong>{COMPANY_INFO.owner}</strong>
+              </div>
             </div>
           </div>
         </div>

@@ -77,6 +77,28 @@
   color: #fff;
 }
 
+.top-ig-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #ff5e7e;
+  font-weight: 600;
+  font-size: 0.78rem;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  background: rgba(225, 48, 108, 0.12);
+  border: 1px solid rgba(225, 48, 108, 0.3);
+  transition: all var(--transition-fast);
+}
+
+.top-ig-badge:hover {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 0 14px rgba(225, 48, 108, 0.5);
+  transform: translateY(-1px);
+}
+
 /* Main Nav */
 .main-nav {
   background: rgba(10, 13, 20, 0.75);
@@ -181,6 +203,27 @@
   gap: 12px;
 }
 
+.nav-ig-icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: rgba(225, 48, 108, 0.12);
+  border: 1px solid rgba(225, 48, 108, 0.3);
+  color: #ff5e7e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.nav-ig-icon-btn:hover {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 0 16px rgba(225, 48, 108, 0.5);
+  transform: translateY(-2px);
+}
+
 .nav-wa-btn {
   padding: 9px 18px;
   font-size: 0.88rem;
@@ -189,6 +232,47 @@
 .nav-quote-btn {
   padding: 9px 18px;
   font-size: 0.88rem;
+}
+
+.btn-instagram {
+  background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+  color: #fff !important;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 18px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 15px rgba(225, 48, 108, 0.25);
+}
+
+.btn-instagram:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(225, 48, 108, 0.45);
+}
+
+.mobile-drawer-owners {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 6px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+  font-size: 0.82rem;
+}
+
+.mobile-drawer-owners span {
+  color: var(--gold-light);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.mobile-drawer-owners strong {
+  color: #fff;
 }
 
 /* Mobile Toggle */

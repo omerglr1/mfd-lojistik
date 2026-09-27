@@ -1,5 +1,6 @@
 import React from 'react';
 import { Phone, Mail, MessageCircle, MapPin, Globe, Shield, ArrowUp, ChevronRight } from 'lucide-react';
+import InstagramIcon from './InstagramIcon';
 import { COMPANY_INFO, SERVICES, REGIONS } from '../data/companyData';
 import './Footer.css';
 
@@ -36,9 +37,17 @@ export default function Footer() {
             </p>
 
             <div className="footer-contact-items">
-              <a href={`tel:${COMPANY_INFO.phoneRaw}`} className="f-contact-link">
+              <a href={`tel:${COMPANY_INFO.phone1Raw}`} className="f-contact-link" title="Türkiye Telefon Hattı">
                 <Phone size={16} className="gold-text-icon" />
-                <span>{COMPANY_INFO.phone}</span>
+                <span>🇹🇷 {COMPANY_INFO.phone1Formatted}</span>
+              </a>
+              <a href={`tel:${COMPANY_INFO.phone2Raw}`} className="f-contact-link" title="Ukrayna / Yurtdışı Telefon Hattı">
+                <Phone size={16} className="gold-text-icon" />
+                <span>🇺🇦 {COMPANY_INFO.phone2Formatted}</span>
+              </a>
+              <a href={COMPANY_INFO.instagram} target="_blank" rel="noopener noreferrer" className="f-contact-link f-ig-link" title="MFD Lojistik Instagram Hesabı">
+                <InstagramIcon size={16} className="ig-pink-icon" />
+                <span>Instagram: @mfdlojistik</span>
               </a>
               <a href={`mailto:${COMPANY_INFO.email}`} className="f-contact-link">
                 <Mail size={16} className="gold-text-icon" />
@@ -49,7 +58,7 @@ export default function Footer() {
                 <span>Avrupa • Ortadoğu • Orta Asya</span>
               </div>
               <div className="f-contact-link">
-                <span className="gold-text font-bold">Firma Sahibi:</span>
+                <span className="gold-text font-bold">Firma Sahipleri:</span>
                 <span>{COMPANY_INFO.owner}</span>
               </div>
             </div>
@@ -101,15 +110,38 @@ export default function Footer() {
             </div>
 
             <div className="footer-wa-box">
-              <span>7/24 WhatsApp Teklif & Bilgi</span>
+              <span>7/24 İletişim & WhatsApp Hattı</span>
               <a 
                 href={COMPANY_INFO.whatsappUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-whatsapp w-100"
+                title="Türkiye WhatsApp Hattı"
               >
-                <MessageCircle size={18} />
-                <span>0552 288 5331</span>
+                <MessageCircle size={16} />
+                <span>🇹🇷 {COMPANY_INFO.phone1}</span>
+              </a>
+
+              <a 
+                href={COMPANY_INFO.whatsappUrlUA()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-whatsapp btn-wa-ua w-100"
+                title="Ukrayna / Yurtdışı WhatsApp Hattı"
+              >
+                <MessageCircle size={16} />
+                <span>🇺🇦 {COMPANY_INFO.phone2}</span>
+              </a>
+
+              <a 
+                href={COMPANY_INFO.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-instagram w-100"
+                title="MFD Lojistik Resmi Instagram Sayfası"
+              >
+                <InstagramIcon size={16} />
+                <span>Instagram @mfdlojistik</span>
               </a>
             </div>
           </div>

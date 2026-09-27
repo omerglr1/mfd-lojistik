@@ -1,17 +1,35 @@
 export const COMPANY_INFO = {
   name: "MFD LOJİSTİK",
   fullName: "MFD Uluslararası Lojistik & Taşımacılık Hizmetleri",
-  owner: "Mehmet Faruk Dere",
-  ownerTitle: "Firma Sahibi & Kurucu",
+  owner: "Mehmet Faruk Dere & Mahmut Dere",
+  ownerTitle: "Firma Sahipleri & Kurucular",
+  owners: [
+    { name: "Mehmet Faruk Dere", role: "Kurucu Ortak" },
+    { name: "Mahmut Dere", role: "Kurucu Ortak" }
+  ],
+  // Primary (TR) Phone
   phone: "0552 288 5331",
   phoneFormatted: "+90 552 288 53 31",
   phoneRaw: "905522885331",
+  phone1: "0552 288 5331",
+  phone1Formatted: "+90 552 288 53 31",
+  phone1Raw: "905522885331",
+  // Secondary (UA / International) Phone
+  phone2: "+380 93 611 3131",
+  phone2Formatted: "+380 93 611 31 31",
+  phone2Raw: "380936113131",
+  // Social & Web
+  instagram: "https://www.instagram.com/mfdlojistik?stkn=MXhiajU1anV6ZDYwcQ==",
+  instagramHandle: "@mfdlojistik",
   email: "mfdlojistik@gmail.com",
   workingHours: "7/24 Kesintisiz Operasyon ve Sevkiyat Desteği",
   address: "Uluslararası Taşımacılık & Lojistik Koordinasyon Merkezi",
   logo: "/images/logo.jpg",
-  whatsappUrl: (message = "Merhaba, MFD Lojistik uluslararası taşımacılık hizmetleriniz hakkında bilgi almak istiyorum.") => {
-    return `https://wa.me/905522885331?text=${encodeURIComponent(message)}`;
+  whatsappUrl: (message = "Merhaba, MFD Lojistik uluslararası taşımacılık hizmetleriniz hakkında bilgi almak istiyorum.", phoneRaw = "905522885331") => {
+    return `https://wa.me/${phoneRaw}?text=${encodeURIComponent(message)}`;
+  },
+  whatsappUrlUA: (message = "Merhaba, MFD Lojistik uluslararası taşımacılık hizmetleriniz hakkında bilgi almak istiyorum.") => {
+    return `https://wa.me/380936113131?text=${encodeURIComponent(message)}`;
   }
 };
 
@@ -201,8 +219,8 @@ export const WHY_US = [
   },
   {
     icon: "MessageCircle",
-    title: "7/24 Kesintisiz WhatsApp Desteği",
-    desc: "Sorularınız, fiyat teklifleriniz ve operasyonel bilgilendirmeleriniz için 0552 288 5331 WhatsApp hattımız daima aktif."
+    title: "7/24 Kesintisiz WhatsApp & Telefon Desteği",
+    desc: "Sorularınız, fiyat teklifleriniz ve operasyonel bilgilendirmeleriniz için +90 552 288 53 31 (TR) ve +380 93 611 3131 (UA) iletişim hatlarımız daima aktif."
   },
   {
     icon: "TrendingUp",
@@ -218,7 +236,7 @@ export const FAQS = [
   },
   {
     q: "Fiyat teklifi nasıl alabilirim ve ne kadar sürede geri dönüş yapılır?",
-    a: "Sitemizdeki 'Canlı Navlun Teklifi Al' formunu doldurarak veya 0552 288 5331 numaralı WhatsApp destek hattımıza doğrudan mesaj atarak 15-30 dakika içinde detaylı navlun teklifinizi alabilirsiniz."
+    a: "Sitemizdeki 'Canlı Navlun Teklifi Al' formunu doldurarak veya +90 552 288 53 31 / +380 93 611 3131 numaralı WhatsApp ve telefon destek hatlarımıza doğrudan ulaşarak 15-30 dakika içinde detaylı navlun teklifinizi alabilirsiniz."
   },
   {
     q: "Yükümün nerede olduğunu nasıl takip edebilirim?",

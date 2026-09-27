@@ -35,7 +35,7 @@ export default function Hero() {
               <span>CMR Sigortalı Taşımacılık</span>
             </span>
             <span className="badge badge-gold">
-              <span>Kurucu: <strong>{COMPANY_INFO.owner}</strong></span>
+              <span>Kurucular: <strong>{COMPANY_INFO.owner}</strong></span>
             </span>
           </div>
 
@@ -47,7 +47,7 @@ export default function Hero() {
 
           {/* Description */}
           <p className="hero-description">
-            <strong>MFD Lojistik</strong> (Mehmet Faruk Dere); modern Euro 6 tır filosu, tecrübeli uzman kadrosu ve 
+            <strong>MFD Lojistik</strong> (Mehmet Faruk Dere & Mahmut Dere); modern Euro 6 tır filosu, tecrübeli uzman kadrosu ve 
             güçlü acente ağıyla Avrupa, Ortadoğu ve Orta Asya ülkelerine 
             komple, parsiyel, frigo ve ağır proje taşımacılığında kesintisiz lojistik çözümleri sunar.
           </p>

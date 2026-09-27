@@ -8,6 +8,32 @@
   align-items: flex-end;
 }
 
+.floating-buttons-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.ig-floating-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(225, 48, 108, 0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ig-floating-btn:hover {
+  transform: scale(1.12);
+  box-shadow: 0 10px 30px rgba(225, 48, 108, 0.7);
+}
+
 .wa-floating-btn {
   width: 64px;
   height: 64px;
@@ -123,6 +149,32 @@
   color: #fff;
 }
 
+/* Tabs */
+.wa-phone-tabs {
+  display: flex;
+  background: #090e18;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.wa-phone-tab {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 9px 6px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.wa-phone-tab.active {
+  color: #25D366;
+  border-bottom-color: #25D366;
+  background: rgba(37, 211, 102, 0.08);
+}
+
 /* Body */
 .wa-popup-body {
   padding: 16px;
@@ -130,6 +182,39 @@
   flex-direction: column;
   gap: 14px;
   background: #080c14;
+}
+
+.wa-bubble-phones {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+  font-size: 0.74rem;
+  color: var(--gold-light);
+  font-weight: 600;
+}
+
+.wa-ig-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: var(--radius-sm);
+  background: rgba(225, 48, 108, 0.12);
+  border: 1px solid rgba(225, 48, 108, 0.28);
+  color: #ff5e7e;
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.wa-ig-banner:hover {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: #fff;
+  border-color: transparent;
 }
 
 .wa-bubble {

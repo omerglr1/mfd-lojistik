@@ -20,7 +20,7 @@ function App() {
         {/* Hero with Branded Truck & Actions */}
         <Hero />
 
-        {/* Corporate Profile, Mehmet Faruk Dere Vision & Values */}
+        {/* Corporate Profile, Mehmet Faruk Dere & Mahmut Dere Vision & Values */}
         <AboutSection />
 
         {/* Logistics Services */}

@@ -111,7 +111,7 @@ export default function ServicesSection() {
               className="btn btn-whatsapp"
             >
               <MessageCircle size={18} />
-              <span>Uzmanla Görüş (0552 288 5331)</span>
+              <span>Uzmanla Görüş (0552 288 5331 / +380 93 611 3131)</span>
             </a>
           </div>
         </div>
